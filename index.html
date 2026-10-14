@@ -78,6 +78,11 @@ p{margin:0 0 14px;max-width:70ch}
 .rank h3{font-size:16px;margin:0 0 2px;color:var(--link)}
 .rank span{font-size:14px;color:var(--mute)}
 
+.skillbox{border:1px solid var(--line);border-radius:4px}
+.srow{display:grid;grid-template-columns:100px 1fr;gap:12px;align-items:center;padding:10px 16px;border-top:1px solid var(--line)}
+.srow:first-child{border-top:0}
+.slabel{font-size:14px;font-weight:600;color:var(--mute)}
+.skills li{font-size:14px;padding:3px 10px}
 footer{padding:20px 0 8px;border-top:1px solid var(--line);font-size:13px;color:var(--mute)}
 
 @media (max-width:800px){
@@ -88,6 +93,7 @@ footer{padding:20px 0 8px;border-top:1px solid var(--line);font-size:13px;color:
   .two,.thesis,.film,.ranks{grid-template-columns:1fr}
   .two>div+div .sub{margin-top:20px}
   .proj-grid{grid-template-columns:1fr}
+  .srow{grid-template-columns:1fr;gap:6px}
   .bar ul{gap:0 16px}
   .bar a{padding:10px 0;font-size:14px}
   h2{font-size:22px}
@@ -118,6 +124,7 @@ footer{padding:20px 0 8px;border-top:1px solid var(--line);font-size:13px;color:
       <li><a href="#background">Experience and education</a></li>
       <li><a href="#thesis">Master's thesis</a></li>
       <li><a href="#projects">Academic projects</a></li>
+      <li><a href="#skills">Skills and languages</a></li>
       <li><a href="#film">Film and interests</a></li>
     </ul>
   </div>
@@ -160,13 +167,6 @@ footer{padding:20px 0 8px;border-top:1px solid var(--line);font-size:13px;color:
     </div>
     </div>
     </div>
-    <p class="sub">Skills and languages</p>
-    <p class="meta" style="margin:0 0 8px">Areas</p>
-    <ul class="skills"><li>Quantitative finance</li><li>Risk modelling</li><li>Statistical modelling</li><li>Machine learning</li><li>Numerical methods</li><li>Backend development</li></ul>
-    <p class="meta" style="margin:18px 0 8px">Tools</p>
-    <ul class="skills"><li>Python</li><li>SQL</li><li>AWS</li><li>Git</li></ul>
-    <p class="meta" style="margin:18px 0 8px">Languages</p>
-    <ul class="skills"><li>English (fluent)</li></ul>
   </section>
 
   <section id="thesis">
@@ -220,6 +220,15 @@ footer{padding:20px 0 8px;border-top:1px solid var(--line);font-size:13px;color:
         <p>Critically examines a published study that uses Singular Value Decomposition and Principal Component Analysis to reconstruct some stock indices from others. After replicating the original results, the project shows that the apparent accuracy comes from how the data was split and processed, and links the unstable cases to the conditioning of the underlying linear systems. The findings show that PCA describes shared movement across markets well but cannot be relied on for forecasting.</p>
         <a class="btn" href="files/Critical_Replication_SVD_PCA_Global_Equity_Indices.pdf" download>Download the report (PDF)</a>
       </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills and languages</h2>
+    <div class="skillbox">
+      <div class="srow"><span class="slabel">Areas</span><ul class="skills"><li>Quantitative finance</li><li>Risk modelling</li><li>Statistical modelling</li><li>Machine learning</li><li>Numerical methods</li><li>Backend development</li></ul></div>
+      <div class="srow"><span class="slabel">Tools</span><ul class="skills"><li>Python</li><li>SQL</li><li>AWS</li><li>Git</li></ul></div>
+      <div class="srow"><span class="slabel">Languages</span><ul class="skills"><li>English (fluent)</li></ul></div>
     </div>
   </section>
 
