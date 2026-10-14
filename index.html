@@ -4,12 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Anandakrishnan Suresh. MSc Mathematics and Finance, Imperial College London. Thesis, projects and film."><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@400;600;700&display=swap" rel="stylesheet">
 <title>Anandakrishnan Suresh | Personal Website</title>
 <style>
 :root{--bg:#ffffff;--soft:#f5f6f8;--ink:#1f2933;--mute:#5b6573;--line:#dde1e6;--link:#1a4d8f;--link-h:#123766;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:64px}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6}
+h1,h2,h3,.sub{font-family:"STIX Two Text",serif}
 a{color:var(--link);text-underline-offset:3px}
 a:hover{color:var(--link-h)}
 a:focus-visible{outline:3px solid #8fb3e8;outline-offset:2px;border-radius:2px}
@@ -69,9 +73,9 @@ p{margin:0 0 14px;max-width:70ch}
 
 /* Film and interests */
 .film{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;margin-bottom:24px}
-.frame{aspect-ratio:16/9;border:1px solid var(--line);border-radius:4px;background:var(--soft);display:grid;place-items:center;text-decoration:none;color:var(--ink);font-size:15px}
-.frame:hover{background:#eceff3;color:var(--ink)}
-.frame svg{width:72px;height:auto;display:block;margin:0 auto 8px}
+.frame{aspect-ratio:16/9;border:1px solid var(--line);border-radius:4px;background:var(--soft);display:grid;overflow:hidden}
+.frame iframe{width:100%;height:100%;border:0;display:block}
+.letterboxd-logo{display:block;width:150px;height:auto}
 .ranks{list-style:none;padding:0;margin:12px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .rank a{display:block;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:14px 16px}
 .rank a:hover{background:var(--soft)}
@@ -83,8 +87,6 @@ p{margin:0 0 14px;max-width:70ch}
 .srow:first-child{border-top:0}
 .slabel{font-size:14px;font-weight:600;color:var(--mute)}
 .skills li{font-size:14px;padding:3px 10px}
-footer{padding:20px 0 8px;border-top:1px solid var(--line);font-size:13px;color:var(--mute)}
-
 @media (max-width:800px){
   .top{padding:28px 0 20px}
   .top-in{flex-direction:column;align-items:flex-start;gap:20px}
@@ -236,15 +238,13 @@ footer{padding:20px 0 8px;border-top:1px solid var(--line);font-size:13px;color:
     <h2>Film and interests</h2>
     <p>Films are a huge interest of mine, both as a viewer and as a maker.</p>
     <div class="film">
-      <a class="frame" href="https://www.youtube.com/watch?v=QrA4Lk5yT5Y" target="_blank" rel="noopener" aria-label="Watch Thurangam on YouTube">
-        <div style="text-align:center"><svg viewBox="0 0 68 48" aria-hidden="true"><path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#f00"/><path d="M27 34.3V13.7L45 24z" fill="#fff"/></svg>Watch on YouTube</div>
-      </a>
+      <div class="frame"><iframe src="https://www.youtube.com/embed/QrA4Lk5yT5Y?enablejsapi=1&amp;origin=https%3A%2F%2Ftheanandakrishnan.github.io" title="Thurangam short film" referrerpolicy="origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
       <div>
         <h3>Thurangam</h3>
         <p>I wrote and directed this short film in 2022. It is in Malayalam and has English subtitles, and you can watch it in full on YouTube.</p>
       </div>
     </div>
-    <p class="sub">Letterboxd</p>
+    <p class="sub"><a href="https://boxd.it/6PRYl" target="_blank" rel="noopener"><img class="letterboxd-logo" src="https://a.ltrbxd.com/logos/letterboxd-logo-h-pos-rgb.svg" alt="Letterboxd"></a></p>
     <p>I keep a Letterboxd account where you can follow what I'm watching and see my ratings. I also make ranked lists of film series and directors, and a few of them are below. <a href="https://boxd.it/6PRYl" target="_blank" rel="noopener">Follow me on Letterboxd</a></p>
     <ul class="ranks">
       <li class="rank"><a href="https://boxd.it/XGcgQ" target="_blank" rel="noopener"><h3>Mission: Impossible Films Ranked</h3><span>View list on Letterboxd</span></a></li>
@@ -254,11 +254,9 @@ footer{padding:20px 0 8px;border-top:1px solid var(--line);font-size:13px;color:
     </ul>
   </section>
 
-  <footer>&copy; <span id="yr">2026</span> Anandakrishnan Suresh</footer>
 </main>
 
 <script>
-document.getElementById('yr').textContent = new Date().getFullYear();
 // Highlight current section in the menu
 var links = document.querySelectorAll('.bar a');
 var secs = Array.prototype.map.call(links, function(a){return document.querySelector(a.getAttribute('href'));});
