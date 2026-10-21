@@ -6,65 +6,75 @@
 <meta name="description" content="Anandakrishnan Suresh. MSc Mathematics and Finance, Imperial College London. Thesis, projects and film."><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@400..700&display=swap" rel="stylesheet">
 <title>Anandakrishnan Suresh | Personal Website</title>
 <style>
-:root{--bg:#ffffff;--soft:#f5f6f8;--ink:#1f2933;--mute:#5b6573;--line:#dde1e6;--link:#1a4d8f;--link-h:#123766;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--bg:#ffffff;--soft:#f7f5f3;--ink:#241f1c;--mute:#6a615b;--line:#e5ded8;--link:#8c1911;--link-h:#6e120c;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:64px}
+html{scroll-behavior:smooth;scroll-padding-top:60px}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6}
 h1,h2,h3,.sub{font-family:"STIX Two Text",serif}
 a{color:var(--link);text-underline-offset:3px}
 a:hover{color:var(--link-h)}
-a:focus-visible{outline:3px solid #8fb3e8;outline-offset:2px;border-radius:2px}
+a:focus-visible{outline:3px solid #b85a48;outline-offset:2px;}
 .wrap{max-width:1000px;margin:0 auto;padding-left:24px;padding-right:24px}
 
 /* Header */
 .top{padding:40px 0 28px}
 .top-in{display:flex;gap:32px;align-items:center}
-.photo{flex:0 0 200px;width:200px;aspect-ratio:4/5;border-radius:4px;overflow:hidden;background:#e7eaee;border:1px solid var(--line)}
+.photo{flex:0 0 200px;width:200px;aspect-ratio:4/5;overflow:hidden;background:#eae4df;border:1px solid var(--line)}
 .photo img{width:100%;height:100%;object-fit:cover;display:block}
-.who h1{font-size:32px;line-height:1.2;margin:0 0 6px;font-weight:600}
+.who h1{font-size:32px;line-height:1.2;margin:0 0 6px;font-weight:500}
 .role{font-size:17px;color:var(--mute);margin:0 0 18px;line-height:1.5}
 .actions{display:flex;flex-wrap:wrap;gap:0}
 
-/* Menu bar */
-.bar{position:sticky;top:0;z-index:10;background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.bar ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:0 24px}
-.bar a{display:block;padding:12px 0;color:var(--ink);text-decoration:none;font-size:15px;border-bottom:2px solid transparent;margin-bottom:-1px}
-.bar a:hover{color:var(--link)}
-.bar a.active{font-weight:600;color:var(--link);border-bottom-color:var(--link)}
+/* Section tabs: Wikipedia-style, scroll away with the page */
+.bar{border-bottom:1px solid var(--line)}
+.bar ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap}
+.bar li{margin-right:2px}
+.bar a{display:block;padding:9px 16px;color:var(--link);text-decoration:none;font-size:14px;line-height:1.45;border:1px solid transparent;border-bottom:0}
+.bar a:hover{text-decoration:underline}
+.bar a.active{background:var(--bg);color:var(--ink);font-weight:600;border-color:var(--line);margin-bottom:-1px;border-bottom:1px solid var(--bg);text-decoration:none}
+
+/* Compact bar that slides in on scroll, plus reading progress */
+.minibar{position:fixed;top:0;left:0;right:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:0 1px 6px rgba(36,31,28,.07);transform:translateY(-104%);transition:transform .28s ease;padding-top:env(safe-area-inset-top,0px)}
+.minibar.show{transform:translateY(0)}
+.minibar-in{max-width:1000px;margin:0 auto;padding:0 24px;height:52px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.minibar-name{font-family:"STIX Two Text",serif;font-size:17px;font-weight:500;color:var(--ink);text-decoration:none;white-space:nowrap}
+.minibar-name:hover{color:var(--link)}
+.minibar-sec{font-size:13px;color:var(--mute);text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--link);z-index:30}
 
 /* Main */
-main{padding-top:36px;padding-bottom:24px}
+main{padding-top:24px;padding-bottom:24px}
 section{padding-bottom:40px}
-h2{font-size:24px;font-weight:600;line-height:1.3;margin:0 0 16px;padding-bottom:8px;border-bottom:1px solid var(--line)}
-h3{font-size:18px;font-weight:600;line-height:1.35;margin:0 0 4px}
+h2{font-size:24px;font-weight:500;line-height:1.3;margin:0 0 16px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+h3{font-size:18px;font-weight:500;line-height:1.35;margin:0 0 4px}
 p{margin:0 0 14px;max-width:70ch}
 .meta{font-size:14px;color:var(--mute);margin:0 0 8px}
-.btn{display:inline-block;font-size:15px;text-decoration:none;padding:8px 16px;border-radius:4px;border:1px solid var(--link);color:var(--link);margin:0 8px 8px 0;background:#fff}
+.btn{display:inline-block;font-size:15px;text-decoration:none;padding:8px 16px;border:1px solid var(--link);color:var(--link);margin:0 8px 8px 0;background:#fff}
 .btn:hover{background:var(--soft);color:var(--link-h)}
 .btn.primary{background:var(--link);color:#fff}
 .btn.primary:hover{background:var(--link-h);color:#fff}
 
 /* Experience and education */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
-.sub{font-size:14px;font-weight:600;color:var(--mute);margin:24px 0 12px}
+.sub{font-size:14px;font-weight:500;color:var(--mute);margin:24px 0 12px}
 .two .sub{margin-top:0}
 .tl{border-left:2px solid var(--line);margin:0 0 24px 2px;padding-left:18px}
 .tl-item{margin-bottom:20px}
 .skills{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
-.skills li{font-size:14px;padding:4px 10px;border:1px solid var(--line);border-radius:4px;background:var(--soft)}
+.skills li{font-size:14px;padding:4px 10px;border:1px solid var(--line);background:var(--soft)}
 
 /* Thesis */
-.thesis{display:grid;grid-template-columns:5fr 7fr;gap:12px 32px;align-items:start;border:1px solid var(--line);border-radius:4px;padding:24px}
+.thesis{display:grid;grid-template-columns:5fr 7fr;gap:12px 32px;align-items:start;border:1px solid var(--line);padding:24px}
 .thesis h3{font-size:20px;margin-bottom:8px}
-.abstract{background:var(--soft);padding:16px 20px;border-radius:4px;margin:0}
+.abstract{background:var(--soft);padding:16px 20px;margin:0}
 .abstract p{margin:6px 0 0;font-size:15px}
 
 /* Projects */
 .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.proj{border:1px solid var(--line);border-radius:4px;padding:18px 20px;display:flex;flex-direction:column}
+.proj{border:1px solid var(--line);padding:18px 20px;display:flex;flex-direction:column}
 .proj:last-child:nth-child(odd){grid-column:1/-1}
 .proj p{font-size:15px;margin-bottom:10px;max-width:none}
 .proj .meta{font-size:13px}
@@ -73,16 +83,16 @@ p{margin:0 0 14px;max-width:70ch}
 
 /* Film and interests */
 .film{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;margin-bottom:24px}
-.frame{aspect-ratio:16/9;border:1px solid var(--line);border-radius:4px;background:var(--soft);display:grid;overflow:hidden}
+.frame{aspect-ratio:16/9;border:1px solid var(--line);background:var(--soft);display:grid;overflow:hidden}
 .frame iframe{width:100%;height:100%;border:0;display:block}
 .letterboxd-logo{display:block;width:150px;height:auto}
 .ranks{list-style:none;padding:0;margin:12px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.rank a{display:block;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:14px 16px}
+.rank a{display:block;text-decoration:none;color:var(--ink);border:1px solid var(--line);padding:14px 16px}
 .rank a:hover{background:var(--soft)}
 .rank h3{font-size:16px;margin:0 0 2px;color:var(--link)}
 .rank span{font-size:14px;color:var(--mute)}
 
-.skillbox{border:1px solid var(--line);border-radius:4px}
+.skillbox{border:1px solid var(--line)}
 .srow{display:grid;grid-template-columns:100px 1fr;gap:12px;align-items:center;padding:10px 16px;border-top:1px solid var(--line)}
 .srow:first-child{border-top:0}
 .slabel{font-size:14px;font-weight:600;color:var(--mute)}
@@ -96,15 +106,16 @@ p{margin:0 0 14px;max-width:70ch}
   .two>div+div .sub{margin-top:20px}
   .proj-grid{grid-template-columns:1fr}
   .srow{grid-template-columns:1fr;gap:6px}
-  .bar ul{gap:0 16px}
-  .bar a{padding:10px 0;font-size:14px}
+  .bar a{padding:8px 12px;font-size:13px}
+  .minibar-in{height:48px;padding:0 16px}
+  .minibar-name{font-size:16px}
   h2{font-size:22px}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.minibar{transition:none}.progress{transition:none}}
 </style>
 </head>
 <body>
-<header class="top">
+<header class="top" id="top">
   <div class="wrap top-in">
     <div class="photo"><img src="images/photo.jpg" alt="Portrait of Anandakrishnan Suresh"></div>
     <div class="who">
@@ -131,6 +142,14 @@ p{margin:0 0 14px;max-width:70ch}
     </ul>
   </div>
 </nav>
+
+<div class="minibar" id="minibar" aria-hidden="true">
+  <div class="minibar-in">
+    <a class="minibar-name" href="#top">Anandakrishnan Suresh</a>
+    <span class="minibar-sec" id="minisec"></span>
+  </div>
+</div>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
 <main class="wrap">
   <section id="about">
@@ -257,15 +276,35 @@ p{margin:0 0 14px;max-width:70ch}
 </main>
 
 <script>
-// Highlight current section in the menu
+// Highlight the current tab, drive the compact bar and the reading progress line
 var links = document.querySelectorAll('.bar a');
 var secs = Array.prototype.map.call(links, function(a){return document.querySelector(a.getAttribute('href'));});
+var minibar = document.getElementById('minibar');
+var minisec = document.getElementById('minisec');
+var progress = document.getElementById('progress');
+var bar = document.querySelector('.bar');
+var ticking = false;
+
 function spy(){
-  var y = window.scrollY + 120, cur = 0;
-  secs.forEach(function(s,i){ if (s && s.offsetTop <= y) cur = i; });
+  ticking = false;
+  var y = window.scrollY;
+  var cur = 0;
+  var yb = y + 120;
+  secs.forEach(function(s,i){ if (s && s.offsetTop <= yb) cur = i; });
   links.forEach(function(a,i){ a.classList.toggle('active', i === cur); });
+  minisec.textContent = links[cur].textContent;
+  var shown = y > bar.offsetTop + bar.offsetHeight;
+  minibar.classList.toggle('show', shown);
+  minibar.setAttribute('aria-hidden', shown ? 'false' : 'true');
+  var h = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.width = (h > 0 ? Math.min(1, Math.max(0, y / h)) * 100 : 0) + '%';
 }
-window.addEventListener('scroll', spy, {passive:true}); spy();
+function onscroll(){
+  if (!ticking){ ticking = true; requestAnimationFrame(spy); }
+}
+window.addEventListener('scroll', onscroll, {passive:true});
+window.addEventListener('resize', onscroll);
+spy();
 </script>
 </body>
 </html>
